@@ -1,0 +1,3 @@
+aws ec2 describe-instances --query "Reservations[].Instances[].InstanceId" --output text > nomedoarquivo.txt
+
+#certifique de colocar o parâmetro --profile iddoprofile caso esteja usando um perfil ao invés de credenciais.
