@@ -1,0 +1,5 @@
+aws ec2 describe-instances --filters "Name=tag:nomedatag,Values=valordatag" --query "Reservations[].Instances[].InstanceId" --output text
+
+#Caso queira só procurar por tags, sem se importar com o valor, faça assim:
+
+aws ec2 describe-instances --filters "Name=tag:nomedatag,Values=*" --query "Reservations[].Instances[].InstanceId" --output text
